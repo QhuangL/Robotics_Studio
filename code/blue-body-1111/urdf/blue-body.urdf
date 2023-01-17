@@ -1,0 +1,923 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="blue-body">
+  <mujoco>
+        <compiler 
+        meshdir="../meshes/" 
+        balanceinertia="true" 
+        discardvisual="false" />
+  </mujoco>
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.00018086 0.0010067 0.018019"
+        rpy="0 0 0" />
+      <mass
+        value="0.22207" />
+      <inertia
+        ixx="0.00013052"
+        ixy="2.0278E-08"
+        ixz="4.1118E-07"
+        iyy="0.00024183"
+        iyz="-1.5117E-06"
+        izz="0.00033067" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://blue-body/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://blue-body/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Link11">
+    <inertial>
+      <origin
+        xyz="0.0346 0.003463 -3.2848E-11"
+        rpy="0 0 0" />
+      <mass
+        value="0.016687" />
+      <inertia
+        ixx="2.7187E-06"
+        ixy="-3.1124E-07"
+        ixz="2.1472E-12"
+        iyy="1.195E-05"
+        iyz="4.8542E-13"
+        izz="9.7666E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://blue-body/meshes/Link11.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://blue-body/meshes/Link11.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint11"
+    type="revolute">
+    <origin
+      xyz="0.0279 -0.0395 0.040325"
+      rpy="1.5708 -0.93181 -1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="Link11" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-0.785"
+      upper="0.785"
+      effort="100"
+      velocity="10" />
+  </joint>
+  <link
+    name="Link21">
+    <inertial>
+      <origin
+        xyz="0.011918 0 3.4694E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.0028359" />
+      <inertia
+        ixx="1.5845E-07"
+        ixy="2.8852E-24"
+        ixz="1.5528E-24"
+        iyy="2.6992E-07"
+        iyz="2.7808E-24"
+        izz="1.3803E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://blue-body/meshes/Link21.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.25098 0.25098 0.25098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://blue-body/meshes/Link21.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint21"
+    type="revolute">
+    <origin
+      xyz="0.08 0.004 0"
+      rpy="0 0 0.63899" />
+    <parent
+      link="Link11" />
+    <child
+      link="Link21" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="100"
+      velocity="10" />
+  </joint>
+  <link
+    name="Link31">
+    <inertial>
+      <origin
+        xyz="0.042 -8.405E-09 0.03"
+        rpy="0 0 0" />
+      <mass
+        value="0.011548" />
+      <inertia
+        ixx="5.7245E-06"
+        ixy="4.7958E-22"
+        ixz="-6.0561E-06"
+        iyy="1.2541E-05"
+        iyz="1.766E-22"
+        izz="6.9973E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://blue-body/meshes/Link31.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://blue-body/meshes/Link31.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint31"
+    type="revolute">
+    <origin
+      xyz="0.02 0 -0.0088"
+      rpy="-1.5708 0.019311 0" />
+    <parent
+      link="Link21" />
+    <child
+      link="Link31" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="100"
+      velocity="10" />
+  </joint>
+  <link
+    name="Link41">
+    <inertial>
+      <origin
+        xyz="0.0088 0.0080823 6.9389E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.0028359" />
+      <inertia
+        ixx="1.3803E-07"
+        ixy="1.3094E-23"
+        ixz="-1.1423E-23"
+        iyy="1.5845E-07"
+        iyz="4.3716E-25"
+        izz="2.6992E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://blue-body/meshes/Link41.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.25098 0.25098 0.25098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://blue-body/meshes/Link41.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint41"
+    type="revolute">
+    <origin
+      xyz="0.084 0 0.06"
+      rpy="0 0 -1.5901" />
+    <parent
+      link="Link31" />
+    <child
+      link="Link41" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="100"
+      velocity="10" />
+  </joint>
+  <link
+    name="Link32">
+    <inertial>
+      <origin
+        xyz="0.042 -8.405E-09 0.03"
+        rpy="0 0 0" />
+      <mass
+        value="0.011548" />
+      <inertia
+        ixx="5.7245E-06"
+        ixy="1.2325E-21"
+        ixz="-6.0561E-06"
+        iyy="1.2541E-05"
+        iyz="8.3314E-22"
+        izz="6.9973E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://blue-body/meshes/Link32.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://blue-body/meshes/Link32.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint32"
+    type="revolute">
+    <origin
+      xyz="0.02 0 0.0088"
+      rpy="-1.5708 0.019311 0" />
+    <parent
+      link="Link21" />
+    <child
+      link="Link32" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="100"
+      velocity="10" />
+  </joint>
+  <link
+    name="Link12">
+    <inertial>
+      <origin
+        xyz="0.0346 0.003463 -3.2848E-11"
+        rpy="0 0 0" />
+      <mass
+        value="0.016687" />
+      <inertia
+        ixx="2.7187E-06"
+        ixy="-3.1124E-07"
+        ixz="2.1472E-12"
+        iyy="1.195E-05"
+        iyz="4.8542E-13"
+        izz="9.7666E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://blue-body/meshes/Link12.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://blue-body/meshes/Link12.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint12"
+    type="revolute">
+    <origin
+      xyz="0.0279 0.0395 0.040325"
+      rpy="1.5708 -0.93181 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="Link12" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-0.785"
+      upper="0.785"
+      effort="100"
+      velocity="10" />
+  </joint>
+  <link
+    name="Link22">
+    <inertial>
+      <origin
+        xyz="0.011918 0 -3.4694E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.0028359" />
+      <inertia
+        ixx="1.5845E-07"
+        ixy="-6.9439E-24"
+        ixz="-1.8817E-23"
+        iyy="2.6992E-07"
+        iyz="-2.0856E-24"
+        izz="1.3803E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://blue-body/meshes/Link22.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.25098 0.25098 0.25098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://blue-body/meshes/Link22.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint22"
+    type="revolute">
+    <origin
+      xyz="0.08 0.004 0"
+      rpy="0 0 0.63899" />
+    <parent
+      link="Link12" />
+    <child
+      link="Link22" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="100"
+      velocity="10" />
+  </joint>
+  <link
+    name="Link33">
+    <inertial>
+      <origin
+        xyz="0.042 -8.405E-09 0.03"
+        rpy="0 0 0" />
+      <mass
+        value="0.011548" />
+      <inertia
+        ixx="5.7245E-06"
+        ixy="2.1919E-22"
+        ixz="-6.0561E-06"
+        iyy="1.2541E-05"
+        iyz="-3.2842E-22"
+        izz="6.9973E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://blue-body/meshes/Link33.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://blue-body/meshes/Link33.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint33"
+    type="revolute">
+    <origin
+      xyz="0.02 0 -0.0088"
+      rpy="-1.5708 -0.019311 0" />
+    <parent
+      link="Link22" />
+    <child
+      link="Link33" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="100"
+      velocity="10" />
+  </joint>
+  <link
+    name="Link42">
+    <inertial>
+      <origin
+        xyz="0.0088 0.0080823 3.8164E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.0028359" />
+      <inertia
+        ixx="1.3803E-07"
+        ixy="-1.559E-23"
+        ixz="-5.6003E-22"
+        iyy="1.5845E-07"
+        iyz="1.2132E-24"
+        izz="2.6992E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://blue-body/meshes/Link42.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.25098 0.25098 0.25098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://blue-body/meshes/Link42.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint42"
+    type="revolute">
+    <origin
+      xyz="0.084 0 0.06"
+      rpy="0 0 -1.5515" />
+    <parent
+      link="Link33" />
+    <child
+      link="Link42" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="100"
+      velocity="10" />
+  </joint>
+  <link
+    name="Link34">
+    <inertial>
+      <origin
+        xyz="0.042 -8.405E-09 0.03"
+        rpy="0 0 0" />
+      <mass
+        value="0.011548" />
+      <inertia
+        ixx="5.7245E-06"
+        ixy="-1.7679E-22"
+        ixz="-6.0561E-06"
+        iyy="1.2541E-05"
+        iyz="7.6947E-26"
+        izz="6.9973E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://blue-body/meshes/Link34.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://blue-body/meshes/Link34.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint34"
+    type="revolute">
+    <origin
+      xyz="0.02 0 0.0088"
+      rpy="-1.5708 -0.019311 0" />
+    <parent
+      link="Link22" />
+    <child
+      link="Link34" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="100"
+      velocity="10" />
+  </joint>
+  <link
+    name="Link13">
+    <inertial>
+      <origin
+        xyz="0.0346 0.003463 -3.2753E-11"
+        rpy="0 0 0" />
+      <mass
+        value="0.016687" />
+      <inertia
+        ixx="2.7187E-06"
+        ixy="-3.1124E-07"
+        ixz="2.1472E-12"
+        iyy="1.195E-05"
+        iyz="4.8542E-13"
+        izz="9.7666E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://blue-body/meshes/Link13.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://blue-body/meshes/Link13.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint13"
+    type="revolute">
+    <origin
+      xyz="0.067 0.0004 0.040325"
+      rpy="1.5708 -0.93148 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Link13" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-0.785"
+      upper="0.785"
+      effort="100"
+      velocity="10" />
+  </joint>
+  <link
+    name="Link23">
+    <inertial>
+      <origin
+        xyz="0.011918 0 -3.7947E-19"
+        rpy="0 0 0" />
+      <mass
+        value="0.0028359" />
+      <inertia
+        ixx="1.5845E-07"
+        ixy="-4.1596E-24"
+        ixz="5.6766E-24"
+        iyy="2.6992E-07"
+        iyz="-6.0878E-24"
+        izz="1.3803E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://blue-body/meshes/Link23.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.25098 0.25098 0.25098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://blue-body/meshes/Link23.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint23"
+    type="revolute">
+    <origin
+      xyz="0.08 0.004 0"
+      rpy="0 0 0.63932" />
+    <parent
+      link="Link13" />
+    <child
+      link="Link23" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="100"
+      velocity="10" />
+  </joint>
+  <link
+    name="Link35">
+    <inertial>
+      <origin
+        xyz="0.042 -8.405E-09 0.03"
+        rpy="0 0 0" />
+      <mass
+        value="0.011548" />
+      <inertia
+        ixx="5.7245E-06"
+        ixy="2.7297E-22"
+        ixz="-6.0561E-06"
+        iyy="1.2541E-05"
+        iyz="2.7415E-22"
+        izz="6.9973E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://blue-body/meshes/Link35.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://blue-body/meshes/Link35.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint35"
+    type="revolute">
+    <origin
+      xyz="0.02 0 -0.0088"
+      rpy="-1.5708 -0.0047619 0" />
+    <parent
+      link="Link23" />
+    <child
+      link="Link35" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="100"
+      velocity="10" />
+  </joint>
+  <link
+    name="Link43">
+    <inertial>
+      <origin
+        xyz="0.0088 0.0080823 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0028359" />
+      <inertia
+        ixx="1.3803E-07"
+        ixy="-9.4725E-23"
+        ixz="1.405E-24"
+        iyy="1.5845E-07"
+        iyz="-1.2325E-25"
+        izz="2.6992E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://blue-body/meshes/Link43.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.25098 0.25098 0.25098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://blue-body/meshes/Link43.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint43"
+    type="revolute">
+    <origin
+      xyz="0.084 0 0.06"
+      rpy="0 0 -1.566" />
+    <parent
+      link="Link35" />
+    <child
+      link="Link43" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="100"
+      velocity="10" />
+  </joint>
+  <link
+    name="Link36">
+    <inertial>
+      <origin
+        xyz="0.042 -8.405E-09 0.03"
+        rpy="0 0 0" />
+      <mass
+        value="0.011548" />
+      <inertia
+        ixx="5.7245E-06"
+        ixy="-4.1028E-22"
+        ixz="-6.0561E-06"
+        iyy="1.2541E-05"
+        iyz="6.5106E-23"
+        izz="6.9973E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://blue-body/meshes/Link36.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://blue-body/meshes/Link36.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint36"
+    type="revolute">
+    <origin
+      xyz="0.02 0 0.0088"
+      rpy="-1.5708 -0.0047619 0" />
+    <parent
+      link="Link23" />
+    <child
+      link="Link36" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="100"
+      velocity="10" />
+  </joint>
+</robot>

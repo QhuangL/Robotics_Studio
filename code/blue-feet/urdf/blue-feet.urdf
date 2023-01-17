@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="blue-feet">
+  <link
+    name="base_link_feet">
+    <inertial>
+      <origin
+        xyz="-2.1345E-08 0.00010829 0.0057911"
+        rpy="0 0 0" />
+      <mass
+        value="0.02827" />
+      <inertia
+        ixx="2.9876E-06"
+        ixy="-6.9853E-12"
+        ixz="2.158E-12"
+        iyy="1.5204E-05"
+        iyz="-2.7552E-08"
+        izz="1.7419E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://blue-feet/meshes/base_link_feet.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.60784 0.86667 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://blue-feet/meshes/base_link_feet.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Link1_feet">
+    <inertial>
+      <origin
+        xyz="0.011918 6.9389E-18 6.9389E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.0028359" />
+      <inertia
+        ixx="1.5845E-07"
+        ixy="-5.1957E-24"
+        ixz="3.4228E-23"
+        iyy="2.6992E-07"
+        iyz="2.3397E-24"
+        izz="1.3803E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://blue-feet/meshes/Link1_feet.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.25098 0.25098 0.25098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://blue-feet/meshes/Link1_feet.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint1_feet"
+    type="revolute">
+    <origin
+      xyz="0.024 0.0089993 0.016"
+      rpy="1.5708 -1.5708 0" />
+    <parent
+      link="base_link_feet" />
+    <child
+      link="Link1_feet" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Link2_feet">
+    <inertial>
+      <origin
+        xyz="0.011918 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0028359" />
+      <inertia
+        ixx="1.5845E-07"
+        ixy="2.7941E-25"
+        ixz="1.5804E-23"
+        iyy="2.6992E-07"
+        iyz="-5.6063E-24"
+        izz="1.3803E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://blue-feet/meshes/Link2_feet.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.25098 0.25098 0.25098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://blue-feet/meshes/Link2_feet.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint2_feet"
+    type="revolute">
+    <origin
+      xyz="-0.024 0.0089993 0.016"
+      rpy="1.5708 -1.5708 0" />
+    <parent
+      link="base_link_feet" />
+    <child
+      link="Link2_feet" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Link3_feet">
+    <inertial>
+      <origin
+        xyz="0.011918 1.3878E-17 2.511E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.0028359" />
+      <inertia
+        ixx="1.5845E-07"
+        ixy="-3.083E-24"
+        ixz="1.2215E-23"
+        iyy="2.6992E-07"
+        iyz="-1.1957E-23"
+        izz="1.3803E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://blue-feet/meshes/Link3_feet.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.25098 0.25098 0.25098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://blue-feet/meshes/Link3_feet.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint3_feet"
+    type="revolute">
+    <origin
+      xyz="0 -0.013 0.016"
+      rpy="3.1416 -1.5708 0" />
+    <parent
+      link="base_link_feet" />
+    <child
+      link="Link3_feet" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>

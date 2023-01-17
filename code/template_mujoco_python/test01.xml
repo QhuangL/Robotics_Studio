@@ -1,0 +1,142 @@
+<mujoco model="test01">
+    <compiler coordinate="global"/>
+
+    <default>
+        <!-- <geom rgba=".5 .1 .1 1"/> -->
+        <!-- <joint type="hinge" damping="0.01"/> -->
+        <joint type="hinge" damping=".2" stiffness="1" armature=".01" limited="true" solimplimit="0 .99 .01"/>
+    </default>
+    <asset>
+        <texture type="skybox" builtin="gradient" rgb1="0.6 0.6 0.6" rgb2="0 0 0" width="512" height="512"/>
+        <texture name="texplane" type="2d" builtin="checker" rgb1=".25 .25 .25" rgb2=".3 .3 .3" width="512" height="512" mark="cross" markrgb=".8 .8 .8"/>
+        <material name="matplane" reflectance="0.3" texture="texplane" texrepeat="1 1" texuniform="true"/>
+    </asset>
+    <worldbody>
+        <!-- <light pos="0 10 1" dir="0 -1 -1" diffuse="1 1 1"/> -->
+
+        <!-- ======= Ground ======= -->
+        <geom name="ground" type="plane" pos="0 0 0" size="10 10 2" material="matplane"/>
+        <light directional="true" diffuse=".8 .8 .8" specular=".2 .2 .2" pos="0 0 5" dir="0 0 -1"/>
+
+        <body name="rod0">
+            <geom type="capsule" fromto="0.1 0 1  -0.1 0 1" size=".05" rgba=".6 .9 1. 1"/>
+            <geom type="capsule" fromto="0. 0. 1  0. 0.1 1" size=".05" rgba=".6 .9 1. 1"/>
+            <joint type="free"/>
+
+            <body name="rod11">
+                <geom type="capsule" fromto="0.1 0 1  0.1 0 0.7" size=".02" rgba=".5 .1 .1 1"/>
+                <joint name="m1" type="hinge" pos="0.1 0 1" axis="0 -1 0" range="-80 80"/>
+
+                <body name="rod21">
+                    <geom  type="capsule" fromto="0.1 0. 0.7  0.1 0. 0.6" size=".02" rgba=".5 .1 .1 1"/>
+                    <joint type="hinge" pos="0.1 0 0.7" axis="0 -1 0" range="-80 80"/>
+
+                    <geom  type="capsule" fromto="0.1 0.05 0.6  0.1 -0.05 0.6" size=".02" rgba=".5 .1 .1 1"/>
+
+                    <body name="rod31">
+                        <geom type="capsule" fromto="0.1 0.05 0.6  0.1 0.05 0.32" size=".02" rgba=".5 .1 .1 1"/>
+                        <joint type="hinge" pos="0.1 0.05 0.6" axis="1 0 0" range="-80 80"/>
+                    </body>
+
+                    <body name="rod32">
+                        <geom type="capsule" fromto="0.1 -0.05 0.6  0.1 -0.05 0.3" size=".02" rgba=".5 .1 .1 1"/>
+                        <joint type="hinge" pos="0.1 -0.05 0.6" axis="1 0 0" range="-80 80"/>
+
+                        <body name="rod41">
+                            <geom type="capsule" fromto="0.1 -0.05 0.3  0.1 0.05 0.3" size=".02" rgba=".5 .1 .1 1"/>
+                            <joint type="hinge" pos="0.1 -0.05 0.3" axis="1 0 0" range="-80 80"/>
+                            <!-- <geom type="capsule" fromto="0.1 0 0.2  0.1 0 0.3" size=".01" rgba=".5 .1 .1 1"/> -->
+                        </body>
+                    </body>
+
+                </body>
+            </body>
+
+            <body name="rod12">
+                <geom type="capsule" fromto="-0.1 0 1  -0.1 0 0.7" size=".02" rgba=".5 .1 .1 1"/>
+                <joint name="m2" type="hinge" pos="-0.1 0 1" axis="0 1 0" range="-80 80"/>
+
+                <body name="rod22">
+                    <geom  type="capsule" fromto="-0.1 0 0.7  -0.1 0. 0.6" size=".02" rgba=".5 .1 .1 1"/>
+                    <joint type="hinge" pos="-0.1 0 0.7" axis="0 1 0" range="-80 80"/>
+
+                    <geom  type="capsule" fromto="-0.1 0.05 0.6  -0.1 -0.05 0.6" size=".02" rgba=".5 .1 .1 1"/>
+
+                    <body name="rod33">
+                        <geom type="capsule" fromto="-0.1 0.05 0.6  -0.1 0.05 0.32" size=".02" rgba=".5 .1 .1 1"/>
+                        <joint type="hinge" pos="-0.1 0.05 0.6" axis="-1 0 0" range="-80 80"/>
+                    </body>
+
+                    <body name="rod34">
+                        <geom type="capsule" fromto="-0.1 -0.05 0.6  -0.1 -0.05 0.3" size=".02" rgba=".5 .1 .1 1"/>
+                        <joint type="hinge" pos="-0.1 -0.05 0.6" axis="-1 0 0" range="-80 80"/>
+
+                        <body name="rod42">
+                            <geom type="capsule" fromto="-0.1 -0.05 0.3  -0.1 0.05 0.3" size=".02" rgba=".5 .1 .1 1"/>
+                            <joint type="hinge" pos="-0.1 -0.05 0.3" axis="-1 0 0" range="-80 80"/>
+                            <!-- <geom type="capsule" fromto="-0.1 0 0.2  -0.1 0 0.3" size=".01" rgba=".5 .1 .1 1"/> -->
+                        </body>
+                    </body>
+
+                </body>
+            </body>
+
+            <body name="rod13">
+                <geom type="capsule" fromto="0. 0.1 1  0. 0.1 0.7" size=".02" rgba=".5 .1 .1 1"/>
+                <joint name="m3" type="hinge" pos="0. 0.1 1" axis="1 0 0" range="-80 80"/>
+
+                <body name="rod23">
+                    <geom  type="capsule" fromto="0. 0.1 0.7  0. 0.1 0.6" size=".02" rgba=".5 .1 .1 1"/>
+                    <joint type="hinge" pos="0. 0.1 0.7" axis="1 0 0" range="-80 80"/>
+
+                    <geom  type="capsule" fromto="0.05 0.1 0.6  -0.05 0.1 0.6" size=".02" rgba=".5 .1 .1 1"/>
+
+                    <body name="rod35">
+                        <geom type="capsule" fromto="-0.05 0.1 0.6  -0.05 0.1 0.32" size=".02" rgba=".5 .1 .1 1"/>
+                        <joint type="hinge" pos="-0.05 0.1 0.6" axis="0 1 0" range="-80 80"/>
+                    </body>
+
+                    <body name="rod36">
+                        <geom type="capsule" fromto="0.05 0.1 0.6  0.05 0.1 0.3" size=".02" rgba=".5 .1 .1 1"/>
+                        <joint type="hinge" pos="0.05 0.1 0.6" axis="0 1 0" range="-80 80"/>
+
+                        <body name="rod43">
+                            <geom type="capsule" fromto="0.05 0.1 0.3  -0.05 0.1 0.3" size=".02" rgba=".5 .1 .1 1"/>
+                            <joint type="hinge" pos="0.05 0.1 0.3" axis="0 1 0" range="-80 80"/>
+                            <!-- <geom type="capsule" fromto="0. 0.1 0.2  0. 0.1 0.3" size=".01" rgba=".5 .1 .1 1"/> -->
+                        </body>
+                    </body>
+
+                </body>
+            </body>
+
+
+        </body>
+
+        <body name="feet">
+            <joint type="free"/>
+            <geom type="box" pos="0 0 0.3" size="0.09 0.09 0.01" rgba=".6 .9 1. 1" density="1"/>
+        </body>
+        
+    </worldbody>
+    <equality>
+        <connect anchor="0.1 0.05 0.3" body1="rod31" body2="rod41" name="equality_constraint1" solref="0.0002 1"/>
+        <connect anchor="-0.1 0.05 0.3" body1="rod33" body2="rod42" name="equality_constraint2" solref="0.0002 1"/>
+        <connect anchor="-0.05 0.2 0.3" body1="rod35" body2="rod43" name="equality_constraint3" solref="0.0002 1"/>
+
+        <connect anchor="0.1 -0.05 0.3" body1="rod41" body2="feet" name="equality_constraint_f11" solref="0.0002 1"/>
+        <connect anchor="0.1 0.05 0.3" body1="rod41" body2="feet" name="equality_constraint_f12" solref="0.0002 1"/>
+        <connect anchor="-0.1 0.05 0.3" body1="rod42" body2="feet" name="equality_constraint_f21" solref="0.0002 1"/>
+        <connect anchor="-0.1 -0.05 0.3" body1="rod42" body2="feet" name="equality_constraint_f22" solref="0.0002 1"/>
+        <connect anchor="0.05 0.1 0.3" body1="rod43" body2="feet" name="equality_constraint_f31" solref="0.0002 1"/>
+        <connect anchor="-0.05 0.1 0.3" body1="rod43" body2="feet" name="equality_constraint_f32" solref="0.0002 1"/>
+
+    </equality>
+    <actuator>
+        <motor name="joint1_motor" joint="m1"/>
+        <motor name="joint2_motor" joint="m2"/>
+        <motor name="joint3_motor" joint="m3"/>
+    </actuator>
+
+    <!-- </tendon> -->
+</mujoco>

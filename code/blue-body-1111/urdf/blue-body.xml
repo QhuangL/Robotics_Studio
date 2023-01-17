@@ -1,0 +1,120 @@
+<mujoco model="blue-body">
+  <compiler angle="radian" meshdir="../meshes/" autolimits="true"/>
+  <size/>
+    <default>
+        <joint armature="1" damping="0.001" limited="true"/>
+        <geom conaffinity="0" condim="3" density="5.0" friction="1 0.5 0.5" margin="0.01" rgba="0.8 0.6 0.4 1"/>
+    </default>
+  <asset>
+    <mesh name="base_link" file="base_link.STL"/>
+    <mesh name="Link11" file="Link11.STL"/>
+    <mesh name="Link21" file="Link21.STL"/>
+    <mesh name="Link31" file="Link31.STL"/>
+    <mesh name="Link41" file="Link41.STL"/>
+    <mesh name="Link32" file="Link32.STL"/>
+    <mesh name="Link12" file="Link12.STL"/>
+    <mesh name="Link22" file="Link22.STL"/>
+    <mesh name="Link33" file="Link33.STL"/>
+    <mesh name="Link42" file="Link42.STL"/>
+    <mesh name="Link34" file="Link34.STL"/>
+    <mesh name="Link13" file="Link13.STL"/>
+    <mesh name="Link23" file="Link23.STL"/>
+    <mesh name="Link35" file="Link35.STL"/>
+    <mesh name="Link43" file="Link43.STL"/>
+    <mesh name="Link36" file="Link36.STL"/>
+  </asset>
+  <worldbody>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.75294 0.75294 0.75294 1" mesh="base_link"/>
+    <geom type="mesh" rgba="0.75294 0.75294 0.75294 1" mesh="base_link"/>
+    <body name="Link11" pos="0.0279 -0.0395 0.040325" quat="0.671323 0.222092 -0.671324 -0.222092">
+      <inertial pos="0.0346 0.003463 -3.2848e-11" quat="0.491513 0.491513 0.508345 0.508345" mass="0.016687" diaginertia="1.19605e-05 9.7666e-06 2.70822e-06"/>
+      <joint name="Joint11" pos="0 0 0" axis="0 0 -1" range="-0.785 0.785"/>
+      <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 1 1 1" mesh="Link11"/>
+      <geom type="mesh" rgba="1 1 1 1" mesh="Link11"/>
+      <body name="Link21" pos="0.08 0.004 0" quat="0.949394 0 0 0.314087">
+        <inertial pos="0.011918 0 0" quat="0.707107 0 0 0.707107" mass="0.0028359" diaginertia="2.6992e-07 1.5845e-07 1.3803e-07"/>
+        <joint name="Joint21" pos="0 0 0" axis="0 0 1" range="-1.57 1.57"/>
+        <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.25098 0.25098 0.25098 1" mesh="Link21"/>
+        <geom type="mesh" rgba="0.25098 0.25098 0.25098 1" mesh="Link21"/>
+        <body name="Link31" pos="0.02 0 -0.0088" quat="0.707073 -0.707075 0.00682735 0.00682738">
+          <inertial pos="0.042 -8.405e-09 0.03" quat="0.645976 0.287603 0.287603 0.645976" mass="0.011548" diaginertia="1.2541e-05 1.24503e-05 2.71454e-07"/>
+          <joint name="Joint31" pos="0 0 0" axis="0 0 1" range="-1.57 1.57"/>
+          <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 1 1 1" mesh="Link31"/>
+          <geom type="mesh" rgba="1 1 1 1" mesh="Link31"/>
+          <body name="Link41" pos="0.084 0 0.06" quat="0.700249 0 0 -0.713899">
+            <inertial pos="0.0088 0.0080823 0" quat="0 0.707107 0 0.707107" mass="0.0028359" diaginertia="2.6992e-07 1.5845e-07 1.3803e-07"/>
+            <joint name="Joint41" pos="0 0 0" axis="0 0 1" range="-1.57 1.57"/>
+            <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.25098 0.25098 0.25098 1" mesh="Link41"/>
+            <geom type="mesh" rgba="0.25098 0.25098 0.25098 1" mesh="Link41"/>
+          </body>
+        </body>
+        <body name="Link32" pos="0.02 0 0.0088" quat="0.707073 -0.707075 0.00682735 0.00682738">
+          <inertial pos="0.042 -8.405e-09 0.03" quat="0.645976 0.287603 0.287603 0.645976" mass="0.011548" diaginertia="1.2541e-05 1.24503e-05 2.71454e-07"/>
+          <joint name="Joint32" pos="0 0 0" axis="0 0 1" range="-1.57 1.57"/>
+          <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 1 1 1" mesh="Link32"/>
+          <geom type="mesh" rgba="1 1 1 1" mesh="Link32"/>
+        </body>
+      </body>
+    </body>
+    <body name="Link12" pos="0.0279 0.0395 0.040325" quat="0.222089 0.671323 0.222094 0.671323">
+      <inertial pos="0.0346 0.003463 -3.2848e-11" quat="0.491513 0.491513 0.508345 0.508345" mass="0.016687" diaginertia="1.19605e-05 9.7666e-06 2.70822e-06"/>
+      <joint name="Joint12" pos="0 0 0" axis="0 0 -1" range="-0.785 0.785"/>
+      <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 1 1 1" mesh="Link12"/>
+      <geom type="mesh" rgba="1 1 1 1" mesh="Link12"/>
+      <body name="Link22" pos="0.08 0.004 0" quat="0.949394 0 0 0.314087">
+        <inertial pos="0.011918 0 0" quat="0.707107 0 0 0.707107" mass="0.0028359" diaginertia="2.6992e-07 1.5845e-07 1.3803e-07"/>
+        <joint name="Joint22" pos="0 0 0" axis="0 0 -1" range="-1.57 1.57"/>
+        <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.25098 0.25098 0.25098 1" mesh="Link22"/>
+        <geom type="mesh" rgba="0.25098 0.25098 0.25098 1" mesh="Link22"/>
+        <body name="Link33" pos="0.02 0 -0.0088" quat="0.707073 -0.707075 -0.00682735 -0.00682738">
+          <inertial pos="0.042 -8.405e-09 0.03" quat="0.645976 0.287603 0.287603 0.645976" mass="0.011548" diaginertia="1.2541e-05 1.24503e-05 2.71454e-07"/>
+          <joint name="Joint33" pos="0 0 0" axis="0 0 1" range="-1.57 1.57"/>
+          <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 1 1 1" mesh="Link33"/>
+          <geom type="mesh" rgba="1 1 1 1" mesh="Link33"/>
+          <body name="Link42" pos="0.084 0 0.06" quat="0.713896 0 0 -0.700252">
+            <inertial pos="0.0088 0.0080823 0" quat="0 0.707107 0 0.707107" mass="0.0028359" diaginertia="2.6992e-07 1.5845e-07 1.3803e-07"/>
+            <joint name="Joint42" pos="0 0 0" axis="0 0 1" range="-1.57 1.57"/>
+            <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.25098 0.25098 0.25098 1" mesh="Link42"/>
+            <geom type="mesh" rgba="0.25098 0.25098 0.25098 1" mesh="Link42"/>
+          </body>
+        </body>
+        <body name="Link34" pos="0.02 0 0.0088" quat="0.707073 -0.707075 -0.00682735 -0.00682738">
+          <inertial pos="0.042 -8.405e-09 0.03" quat="0.645976 0.287603 0.287603 0.645976" mass="0.011548" diaginertia="1.2541e-05 1.24503e-05 2.71454e-07"/>
+          <joint name="Joint34" pos="0 0 0" axis="0 0 1" range="-1.57 1.57"/>
+          <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 1 1 1" mesh="Link34"/>
+          <geom type="mesh" rgba="1 1 1 1" mesh="Link34"/>
+        </body>
+      </body>
+    </body>
+    <body name="Link13" pos="0.067 0.0004 0.040325" quat="0.631791 0.631794 -0.31755 0.317551">
+      <inertial pos="0.0346 0.003463 -3.2753e-11" quat="0.491513 0.491513 0.508345 0.508345" mass="0.016687" diaginertia="1.19605e-05 9.7666e-06 2.70822e-06"/>
+      <joint name="Joint13" pos="0 0 0" axis="0 0 -1" range="-0.785 0.785"/>
+      <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 1 1 1" mesh="Link13"/>
+      <geom type="mesh" rgba="1 1 1 1" mesh="Link13"/>
+      <body name="Link23" pos="0.08 0.004 0" quat="0.949342 0 0 0.314244">
+        <inertial pos="0.011918 0 0" quat="0.707107 0 0 0.707107" mass="0.0028359" diaginertia="2.6992e-07 1.5845e-07 1.3803e-07"/>
+        <joint name="Joint23" pos="0 0 0" axis="0 0 1" range="-1.57 1.57"/>
+        <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.25098 0.25098 0.25098 1" mesh="Link23"/>
+        <geom type="mesh" rgba="0.25098 0.25098 0.25098 1" mesh="Link23"/>
+        <body name="Link35" pos="0.02 0 -0.0088" quat="0.707103 -0.707106 -0.00168358 -0.00168359">
+          <inertial pos="0.042 -8.405e-09 0.03" quat="0.645976 0.287603 0.287603 0.645976" mass="0.011548" diaginertia="1.2541e-05 1.24503e-05 2.71454e-07"/>
+          <joint name="Joint35" pos="0 0 0" axis="0 0 1" range="-1.57 1.57"/>
+          <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 1 1 1" mesh="Link35"/>
+          <geom type="mesh" rgba="1 1 1 1" mesh="Link35"/>
+          <body name="Link43" pos="0.084 0 0.06" quat="0.708801 0 0 -0.705409">
+            <inertial pos="0.0088 0.0080823 0" quat="0 0.707107 0 0.707107" mass="0.0028359" diaginertia="2.6992e-07 1.5845e-07 1.3803e-07"/>
+            <joint name="Joint43" pos="0 0 0" axis="0 0 1" range="-1.57 1.57"/>
+            <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.25098 0.25098 0.25098 1" mesh="Link43"/>
+            <geom type="mesh" rgba="0.25098 0.25098 0.25098 1" mesh="Link43"/>
+          </body>
+        </body>
+        <body name="Link36" pos="0.02 0 0.0088" quat="0.707103 -0.707106 -0.00168358 -0.00168359">
+          <inertial pos="0.042 -8.405e-09 0.03" quat="0.645976 0.287603 0.287603 0.645976" mass="0.011548" diaginertia="1.2541e-05 1.24503e-05 2.71454e-07"/>
+          <joint name="Joint36" pos="0 0 0" axis="0 0 1" range="-1.57 1.57"/>
+          <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 1 1 1" mesh="Link36"/>
+          <geom type="mesh" rgba="1 1 1 1" mesh="Link36"/>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+</mujoco>
